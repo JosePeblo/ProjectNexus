@@ -1,12 +1,19 @@
-const express = require('express');
-const fileUpload = require('express-fileupload');
-const app = express();
-const path = require('path');
-const env = require('dotenv').config();
-const cookieParser = require('cookie-parser');
-const { auth, requiresAuth } = require('express-openid-connect');
+import express from 'express';
+import fileUpload from 'express-fileupload';
+import jwt from 'jsonwebtoken';
+//JWT secret = PN_ACC_JWT_SECRET=random chain
+import cookieParser from 'cookie-parser';
+import session from 'express-session';
+
+import path from 'path';
+import 'dotenv/config';
+
+
+
+
 const { initRoutes } = require('./routes');
-const session = require('express-session');
+
+const app = express();
 
 const PORT = process.env.PORT || 3000;
 const config = {
