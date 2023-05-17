@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/public/*.{html, js}",
-            "./src/public/scripts/*.js",
-            "./src/views/*.{ejs, html, js}",
-            "./src/views/partials/*.{ejs, html, js}",
-            "./node_modules/tw-elements/dist/js/**/*.js"],
+  content: ["./page/public/*.{html, js}",
+            "./page/public/scripts/*.js",
+            "./page/views/*.{ejs, html, js}",
+            "./page/views/components/*.{ejs, html, js}"],
   theme: {
     screens: {
       'phone': {'max': '800px'},

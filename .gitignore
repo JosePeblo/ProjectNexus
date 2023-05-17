@@ -3,7 +3,7 @@
 .DS_Store
 .vscode
 dist/
-output.css
+/page/public/styles/style.min.css
 .idea
 package-lock.json
 *.csv

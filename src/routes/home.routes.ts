@@ -1,14 +1,23 @@
-const express = require('express');
-const { requiresAuth } = require('express-openid-connect');
-const homeController = require('../controllers/home.controller');
-const uploadController = require('../controllers/upload.contoller');
-const projectController = require('../controllers/project.controller');
+import express from 'express';
+import { auth } from '../controllers/home.controller.js'
 
-let router = express.Router();
+const router = express.Router();
 
-router.post('/upload', requiresAuth(), uploadController.file);
-router.get('/createProject', requiresAuth(), projectController.postProject);
-router.get('/', requiresAuth(), homeController.home);
-router.get('/:id', requiresAuth(), homeController.dashboard);
+router.get('/', auth);
 
-module.exports = router;
+export default router;
+
+// const express = require('express');
+// const { requiresAuth } = require('express-openid-connect');
+// const homeController = require('../controllers/home.controller');
+// const uploadController = require('../controllers/upload.contoller');
+// const projectController = require('../controllers/project.controller');
+
+// let router = express.Router();
+
+// router.post('/upload', requiresAuth(), uploadController.file);
+// router.get('/createProject', requiresAuth(), projectController.postProject);
+// router.get('/', requiresAuth(), homeController.home);
+// router.get('/:id', requiresAuth(), homeController.dashboard);
+
+// module.exports = router;
