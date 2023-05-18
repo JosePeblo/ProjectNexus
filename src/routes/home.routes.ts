@@ -1,9 +1,10 @@
 import express from 'express';
-import { auth } from '../controllers/home.controller.js'
+import { auth, signup } from '../controllers/home.controller.js'
 
 const router = express.Router();
 
 router.get('/', auth);
+router.get('/signup', signup);
 
 export default router;
 

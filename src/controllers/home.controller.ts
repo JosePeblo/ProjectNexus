@@ -1,12 +1,15 @@
 import type { RequestHandler } from "express"
 
-
 export const auth: RequestHandler = (req, res) => {
-    res.render('index');
+    res.render('login');
 }
 
 export const login: RequestHandler = (req, res) => {
     
+}
+
+export const signup: RequestHandler = (req, res) => {
+    res.render('signup');
 }
 
 

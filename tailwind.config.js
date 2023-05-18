@@ -2,8 +2,7 @@
 module.exports = {
   content: ["./page/public/*.{html, js}",
             "./page/public/scripts/*.js",
-            "./page/views/*.{ejs, html, js}",
-            "./page/views/components/*.{ejs, html, js}"],
+            "./page/views/**/*.{ejs,html,js}"],
   theme: {
     screens: {
       'phone': {'max': '800px'},
@@ -19,6 +18,14 @@ module.exports = {
         membersFont: '#7fb096',
       },
       colors: {
+        primary: '#151009',
+        secondary: '#fcfaf8',
+        btn: {
+          primary: '#a0b3ee',
+          secondary: '#ecb9f9'
+        },
+        accent: '#6e49df',
+
         mainBg: '#eeeeee',
         dropZone: '#fbfcfd',
         dropBorder: '#0f27761a',
@@ -32,10 +39,6 @@ module.exports = {
             green: '#427a5B',
             yellow: '#938406',
           }
-        },
-        accent: {
-          1: '#ee3323',
-          2: '#ff3120'
         },
         custom: {
           200: '#98a2b3'

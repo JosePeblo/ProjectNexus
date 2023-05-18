@@ -4,6 +4,8 @@
 .vscode
 dist/
 /page/public/styles/style.min.css
+/page/views/styles
+/page/views/*.html
 .idea
 package-lock.json
 *.csv

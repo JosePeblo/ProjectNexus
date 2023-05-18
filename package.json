@@ -10,7 +10,8 @@
         "serve": "nodemon ./src/index.js",
         "build": "tailwindcss -i ./page/styles/style.css -o ./page/public/styles/style.min.css --minify",
         "dev": "concurrently \"tsc -w\" \"nodemon ./dist/index.js\" \"tailwindcss -i ./page/styles/style.css -o ./page/public/styles/style.min.css --watch\" ",
-        "start": "npm install && node \"./cli/project.config.mjs\""
+        "start": "npm install && node \"./cli/project.config.mjs\"",
+        "tw": "tailwindcss -i ./page/styles/style.css -o ./page/views/styles/style.min.css --watch"
     },
     "keywords": [],
     "author": "",
@@ -43,7 +44,9 @@
         "typescript": "^5.0.4"
     },
     "nodemonConfig": {
-        "watch": ["dist"],
+        "watch": [
+            "dist"
+        ],
         "ext": "js",
         "delay": "1000"
     }
