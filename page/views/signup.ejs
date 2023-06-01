@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 <%- include('components/head.ejs') %>
-<%- include('components/mainPage/head.ejs') %>
-<%- include('components/mainPage/signupForm.ejs') %>
-<%- include('components/mainPage/foot.ejs') %>
+<%- include('components/authPages/head.ejs') %>
+
+<form action="/signup" method="post"
+    class="bg-white flex flex-col p-6 gap-5 rounded-lg border-[2px] shadow-lg">
+    <input id="email" name="email" type="email" placeholder="Email" class="w-80 p-3 border rounded-md shadow-md">
+    <input id="password" name="password" type="password" placeholder="Password" class="w-80 p-3 border rounded-md shadow-md">
+    <input id="confirmation" name="confirmation" type="password" placeholder="Confirm password" class="w-80 p-3 border rounded-md shadow-md">
+    <button class="bg-btn-primary text-secondary p-2 rounded-md shadow-md font-bold text-lg">
+        <span class="flex justify-center">
+            Sign Up
+        </span>
+    </button>
+    
+    <hr>
+    <span class="text-center text-accent">
+        Already have an account?
+        <a href="/login" class="font-bold border-b-2 border-accent hover:text-btn-secondary hover:border-secondary">
+            Log In
+        </a>
+    </span>
+</form>
+
+<%- include('components/authPages/foot.ejs') %>

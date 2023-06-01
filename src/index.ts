@@ -2,24 +2,31 @@ import express from 'express';
 import fileUpload from 'express-fileupload';
 // import jwt from 'jsonwebtoken';
 // //JWT secret = PN_ACC_JWT_SECRET=random chain
-// import cookieParser from 'cookie-parser';
+import cookieParser from 'cookie-parser';
 // import session from 'express-session';
 
 import path from 'path';
 import 'dotenv/config';
 
+import mongoose from "mongoose";
+
 import initRoutes from './routes/index.js';
 
 const app = express();
+
+mongoose.connect(process.env.PN_MONGO_HOST || 'mongodb://127.0.0.1:27017/testdb');
+
 const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'page', 'views'));
 
 app.use(express.static(path.join(__dirname, '..', 'page', 'public')));
-// app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
 app.use(fileUpload());
+
 
 initRoutes(app);
 

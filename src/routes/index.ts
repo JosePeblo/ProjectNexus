@@ -1,8 +1,8 @@
 import express from 'express'
-import home from './home.routes.js'
+import auth from './auth.routes.js'
 
 const initRoutes = (app: express.Express) => {
-    app.use('/', home)
+    app.use('/', auth)
 }
 
 export default initRoutes;

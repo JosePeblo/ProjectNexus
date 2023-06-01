@@ -1,21 +1,3 @@
-import type { RequestHandler } from "express"
-
-export const loginPage: RequestHandler = (req, res) => {
-    res.render('login');
-}
-
-export const signupPage: RequestHandler = (req, res) => {
-    res.render('signup');
-}
-
-export const login: RequestHandler = (req, res) => {
-    res.send('welcome')
-}
-
-export const signup: RequestHandler = (req, res) => {
-    res.send('welcome')
-}
-
 // const Project = require("../models/project.model");
 // const charts = require("../utils/chartData");
 

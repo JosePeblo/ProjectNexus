@@ -1,12 +1,4 @@
-import express from 'express';
-import { loginPage, signupPage, login, signup } from '../controllers/home.controller.js';
 
-const router = express.Router();
-
-router.get('/', loginPage);
-router.get('/signup', signupPage);
-
-export default router;
 
 // const express = require('express');
 // const { requiresAuth } = require('express-openid-connect');

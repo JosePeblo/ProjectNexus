@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<%- include('components/head.ejs') %>
+
+<body class="font-inter flex flex-col justify-between bg-secondary h-full">
+    <main class="flex flex-col items-center py-40 text-primary phone:pt-16">
+        <h1 class="text-center mb-5 text-5xl font-bold text-primary break-words">
+            Verify your email
+        </h1>
+
+        <form action="#"
+            id="verify-dialog" class="w-96 flex flex-col items-center bg-white p-6 rounded-lg border-[2px] shadow-lg">
+            <p class="text-lg max-w-md text-center pb-4">
+                Please enter the 5-digit verification code we sent via email:
+            </p>
+            <div id="verify-body" class="flex w-full justify-center gap-4 mb-6 selection:bg-transparent">
+                <input type="text" maxlength="1" class="w-10 p-2 text-center border rounded-md shadow-md focus:shadow-btn-primary focus:outline-btn-primary">
+                <input type="text" maxlength="1" class="w-10 p-2 text-center border rounded-md shadow-md focus:shadow-btn-primary focus:outline-btn-primary">
+                <input type="text" maxlength="1" class="w-10 p-2 text-center border rounded-md shadow-md focus:shadow-btn-primary focus:outline-btn-primary">
+                <input type="text" maxlength="1" class="w-10 p-2 text-center border rounded-md shadow-md focus:shadow-btn-primary focus:outline-btn-primary">
+                <input type="text" maxlength="1" class="w-10 p-2 text-center border rounded-md shadow-md focus:shadow-btn-primary focus:outline-btn-primary">
+            </div>
+            <button id="verify-btn" class="mb-4 w-44 bg-btn-primary text-secondary p-2 rounded-md shadow-md font-bold text-lg">
+                <span class="flex justify-center">
+                    Verify
+                </span>
+            </button>
+            
+            <span class="text-center">
+                Didn't receive the code?
+            </span>
+            <a href="#" class="text-accent font-bold hover:text-btn-secondary">
+                Send code again
+            </a>
+        </form>
+        <script src="scripts/verifyPage.js"></script>
+
+    </main>
+    <footer class="bg-primary text-secondary flex justify-start font-semibold px-4">
+        <a href="" class="px-4 py-4 hover:bg-white hover:bg-opacity-10">
+            About
+        </a>
+        <a href="https://github.com/alejandraa-cruiz/TC2005B-Equipo-" class="flex gap-2 px-4 py-4 hover:bg-white hover:bg-opacity-10">
+            <i class="bx bxl-github text-2xl"></i>
+            <span>
+                Original project
+            </span>
+        </a>
+        <a href="https://github.com/JosePeblo/ProjectNexus" class="flex gap-2 px-4 py-4 hover:bg-white hover:bg-opacity-10">
+            <i class="bx bxl-github text-2xl"></i>
+            <span>
+                Fork
+            </span>
+        </a>
+    </footer>
+</body>
+
+</html>
